@@ -4,3 +4,4 @@ numpy
 requests
 beautifulsoup4
 scikit-learn
+matplotlib # Asegúrate de que matplotlib esté incluido
