@@ -82,7 +82,9 @@ source_type = st.radio(
 
 document_text = ""
 if source_type == 'URL':
-    content_input = st.text_input("Ingresar URL del Documento:", "https://es.wikipedia.org/wiki/Inteligencia_artificial")
+    # --- VALOR ACTUALIZADO AQUÍ ---
+    content_input = st.text_input("Ingresar URL del Documento:", "https://www.argentina.gob.ar/justicia/convosenlaweb/situaciones/que-es-la-inteligencia-artificial")
+    # -----------------------------
     if content_input:
         with st.spinner('Obteniendo y limpiando contenido...'):
             document_text = fetch_content_from_url(content_input)
@@ -95,7 +97,9 @@ elif source_type == 'Raw Text':
     document_text = st.text_area("Pegar Texto del Documento:", height=200, 
                                  value="La inteligencia artificial (IA) es un campo de la informática dedicado a la resolución de problemas cognitivos comúnmente asociados con la inteligencia humana.")
 
-query = st.text_input("Ingresar Consulta Objetivo:", "Historia y evolución de los algoritmos de aprendizaje automático.")
+# --- VALOR ACTUALIZADO AQUÍ ---
+query = st.text_input("Ingresar Consulta Objetivo:", "inteligencia artificial")
+# -----------------------------
 
 # 2. Botón de Análisis
 if st.button("Calcular Relevancia Semántica", type="primary") and document_text and query:
@@ -103,7 +107,7 @@ if st.button("Calcular Relevancia Semántica", type="primary") and document_text
     if document_text and not document_text.startswith("Error"):
         
         # ----------------------------------------------------
-        # NUEVA LÓGICA: CHUNKING Y BÚSQUEDA DEL MEJOR MATCH
+        # LÓGICA: CHUNKING Y BÚSQUEDA DEL MEJOR MATCH
         # ----------------------------------------------------
         chunks = chunk_document(document_text)
         if not chunks:
