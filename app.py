@@ -146,3 +146,16 @@ if st.button("Calcular Relevancia Semántica", type="primary") and document_text
             st.code(f"Segmento del Vector de la Consulta: {query_vector_slice}", language='python')
     else:
         st.error("Asegúrate de tener contenido de documento válido y una consulta antes de ejecutar el análisis.")
+
+# ----------------------------------------------------
+# 5. NUEVO PIE DE PÁGINA Y CONTACTO
+# ----------------------------------------------------
+st.markdown("---") # Línea divisoria
+st.markdown("""
+### Información y Contacto 🤝
+✨ Esta herramienta fue creada con **fines educativos y de asistencia a profesionales**.
+
+💌 **¿Te sirvió? ¿Tenés alguna sugerencia? ¿Querés charlar sobre SEO, comunicación digital o IA aplicada?** Escribinos a: **`hola@crawla.agency`**
+
+🌐 Conectá con Crawla en **[LinkedIn](https://www.linkedin.com/company/crawla/)**
+""")
